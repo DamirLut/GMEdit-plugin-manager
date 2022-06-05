@@ -1,0 +1,6 @@
+{
+  "name": "plugin-manager",
+  "scripts": ["main.js"],
+  "stylesheets": ["style.css"],
+  "module": true
+}

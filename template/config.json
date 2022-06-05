@@ -1,0 +1,1 @@
+{ "name": "%NAME%", "scripts": ["main.js"], "stylesheets": ["style.css"], "module": true }
