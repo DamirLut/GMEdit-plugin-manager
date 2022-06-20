@@ -2,9 +2,29 @@
 
 const fs = require('fs');
 const path = require('path');
+const child_process = require('child_process');
 
 GMEdit.register('plugin-manager', {
   init: (state) => {
+    const MenuListItems = [
+      {
+        id: 'plugin-manager-separator',
+        type: 'separator',
+      },
+      {
+        id: 'plugin-manager-open-folder',
+        label: 'Open plugins folder',
+        click: () => {
+          child_process.exec(`start "" "${path.join(state.dir, '..')}"`);
+        },
+      },
+    ];
+
+    let MainMenu = $gmedit['ui.MainMenu'].menu;
+    MenuListItems.forEach((element) => {
+      MainMenu.append(new Electron_MenuItem(element));
+    });
+
     window.generatePlugin = function (name, module = true) {
       const NAME_TEMPLATES = {
         NAME: () => name,
