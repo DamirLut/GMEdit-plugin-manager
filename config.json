@@ -1,6 +1,12 @@
 {
   "name": "plugin-manager",
-  "scripts": ["main.js"],
-  "stylesheets": ["style.css"],
-  "module": true
+  "scripts": [
+    "main.js"
+  ],
+  "stylesheets": [
+    "style.css"
+  ],
+  "module": true,
+  "git": "DamirLut/GMEdit-plugin-manager",
+  "#last-commit": "2022-08-04T14:55:34.000Z"
 }
